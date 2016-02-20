@@ -25,4 +25,7 @@
         <param name="publish_frequency" value="50"/> <!-- Hz -->
     </node>
 
+    <!-- start the simulation specific move_base stuff -->
+    <include file="$(find igvc_gazebo)/launch/includes/gazebo_move_base.launch.xml" />
+
 </launch>
