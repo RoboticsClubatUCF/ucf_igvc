@@ -1,8 +1,6 @@
 # ucf_igvc
 UCF IGVC specific workspace.
 
-Temp for testing git stuff
-
 ## Table of Contents
 * [Packages](#packages)
 * [Getting Started](#getting-started)
