@@ -1,8 +1,6 @@
 # ucf_igvc
 UCF IGVC specific workspace.
 
-This workspace provides packages for functionality specific to the UCF IGVC platform.
-
 ## Table of Contents
 * [Packages](#packages)
 * [Getting Started](#getting-started)
