@@ -69,7 +69,8 @@ src/no_pid/vel_controller_node_nopid.cpp)
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
-# add_dependencies(igvc_vel_controller_node igvc_vel_controller_generate_messages_cpp)
+add_dependencies(vel_controller_node_pid roboteq_msgs_generate_messages_cpp)
+add_dependencies(vel_controller_node_nopid roboteq_msgs_generate_messages_cpp)
 
 ## Specify libraries to link a library or executable target against
 # target_link_libraries(igvc_vel_controller_node

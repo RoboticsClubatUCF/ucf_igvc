@@ -68,7 +68,8 @@ find_package(catkin REQUIRED COMPONENTS
 ## Generate added messages and services with any dependencies listed here
 # generate_messages(
 #   DEPENDENCIES
-#   geometry_msgs#   roboteq_msgs
+#   geometry_msgs
+#   roboteq_msgs
 # )
 
 ###################################
@@ -109,7 +110,7 @@ add_executable(igvc_encoders_node src/encoder.cpp src/encoder_driver.cpp)
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
-# add_dependencies(igvc_encoders_node igvc_encoders_generate_messages_cpp)
+add_dependencies(igvc_encoders_node roboteq_msgs_generate_messages_cpp)
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(igvc_encoders_node

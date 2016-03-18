@@ -7,6 +7,7 @@ project(igvc_cmd_multiplexer)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   geometry_msgs
+  roboteq_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -109,7 +110,7 @@ add_executable(igvc_cmd_multiplexer_node  ${SOURCES})
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
-# add_dependencies(igvc_cmd_multiplexer_node igvc_cmd_multiplexer_generate_messages_cpp)
+add_dependencies(igvc_cmd_multiplexer_node roboteq_msgs_generate_messages_cpp)
 
 ## Specify libraries to link a library or executable target against
  target_link_libraries(igvc_cmd_multiplexer_node
