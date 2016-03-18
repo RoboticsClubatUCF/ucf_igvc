@@ -65,7 +65,7 @@
 			<mu1>0.0</mu1>
 			<mu2>0.0</mu2>
 			<kp>10000000.0</kp>
-			<kd>100.0</kd>
+			<kd>1000.0</kd>
 		</gazebo>
 
 		<!-- Caster wheel joint -->
