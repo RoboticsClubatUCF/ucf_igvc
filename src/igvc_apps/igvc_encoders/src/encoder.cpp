@@ -56,8 +56,8 @@ void Encoder::updateTwistMsg()
 
     // Populate the message fields.
     // TODO: Goofy constant, properly fix this later, maybe...
-    encoder_msg_.twist.twist.angular.z = -1 * angular_velocity_;
-    encoder_msg_.twist.twist.linear.x = -1 * linear_velocity_;
+    encoder_msg_.twist.twist.angular.z = 1 * angular_velocity_;
+    encoder_msg_.twist.twist.linear.x = 1 * linear_velocity_;
 
     // Stamp current time.
     encoder_msg_.header.stamp.sec = ros::Time::now().sec;

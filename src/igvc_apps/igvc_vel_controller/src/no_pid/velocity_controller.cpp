@@ -52,8 +52,8 @@ namespace igvc
     {
         //TODO: Add PID Controllers for both velocity vectors
 
-        double linear_velocity_x = -1 * msg.linear.x;	// linear x m/s
-        double angular_velocity_z = -1 * msg.angular.z; 	// yaw rad/s
+        double linear_velocity_x = 1 * msg.linear.x;	// linear x m/s
+        double angular_velocity_z = 1 * msg.angular.z; 	// yaw rad/s
 
         double linear_contribution = linear_velocity_x / wheel_radius_;
         double angular_contribution = angular_velocity_z * base_radius_ / wheel_radius_;

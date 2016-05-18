@@ -1,5 +1,5 @@
 <launch>
-	<arg name="port" default="/dev/roboteq" />
+	<arg name="port" default="/dev/ttyUSB1" />
 	<arg name="baud" default="115200" />
 	<arg name="channels" default="[right_motor, left_motor]" />
 	<arg name="wheel_radius" default="0.15875" />

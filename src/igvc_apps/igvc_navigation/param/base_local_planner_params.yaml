@@ -12,8 +12,8 @@ TrajectoryPlannerROS:
     acc_lim_x: 0.4
     acc_lim_y: 0
 
-    yaw_goal_tolerance: 3.0
-    xy_goal_tolerance: 1.0
+    yaw_goal_tolerance: 1.5
+    xy_goal_tolerance: 0.5
     latch_xy_goal_tolerance: true # ONLY turn in place once we reach the xy goal
 
     # Path weight parameters

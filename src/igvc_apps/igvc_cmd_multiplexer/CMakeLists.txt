@@ -7,6 +7,7 @@ project(igvc_cmd_multiplexer)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   geometry_msgs
+  roboteq_msgs
 )
 
 ## System dependencies are found with CMake's conventions

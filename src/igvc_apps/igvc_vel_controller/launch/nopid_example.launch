@@ -1,18 +1,18 @@
 <launch>
-	<arg name="port" default="/dev/roboteq" />
+	<arg name="port" default="/dev/ttyUSB1" />
 	<arg name="baud" default="115200" />
 	<arg name="channels" default="[right_motor, left_motor]" />
 	<arg name="wheel_radius" default="0.15875" />
 	<arg name="base_radius" default="0.35560" />
 	<arg name="cmd_vel_topic" default="/cmd_vel" />
 
- 	<node pkg="roboteq_driver" type="driver_node" name="roboteq_driver" output="screen">
+ 	<node pkg="roboteq_driver" type="driver_node" name="roboteq_driver" output="log">
 		<rosparam param="port" subst_value="True">$(arg port)</rosparam>
 		<rosparam param="baud" subst_value="True">$(arg baud)</rosparam>
 		<rosparam param="channels" subst_value="True">$(arg channels)</rosparam>
 	</node>
 
-	<node pkg="igvc_vel_controller" type="vel_controller_node_nopid" name="vel_controller" output="screen">
+	<node pkg="igvc_vel_controller" type="vel_controller_node_nopid" name="vel_controller" output="log">
 		<rosparam param="channels" subst_value="True">$(arg channels)</rosparam>
 		<rosparam param="wheel_radius" subst_value="True">$(arg wheel_radius)</rosparam>
 		<rosparam param="base_radius" subst_value="True">$(arg base_radius)</rosparam>
