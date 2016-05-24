@@ -34,7 +34,7 @@ void IGVCCmdMultiplexer::statusCB(const roboteq_msgs::StatusConstPtr msg)
 
 void IGVCCmdMultiplexer::publish()
 {
-    geometry_msgs::Twist *msg = is_autonomous_ ? &autonomous_msg_ : &teleop_msg_;
+    geometry_msgs::Twist *msg = true ? &autonomous_msg_ : &teleop_msg_;
 
     cmd_vel_pub_.publish(*msg);
 

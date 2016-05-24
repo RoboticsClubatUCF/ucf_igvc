@@ -51,8 +51,8 @@ void Encoder::rightCallback(const roboteq_msgs::FeedbackConstPtr& msg)
 void Encoder::updateTwistMsg()
 {
     // Calculate as member variable for readability.
-    linear_velocity_ = (left_speed_ + right_speed_) / 2;
-    angular_velocity_ = (right_speed_ - left_speed_) / (2 * base_radius_);
+    linear_velocity_ = (left_speed_ + right_speed_) / 2.0;
+    angular_velocity_ = (right_speed_ - left_speed_) / (2.0 * base_radius_);
 
     // Populate the message fields.
     // TODO: Goofy constant, properly fix this later, maybe...
@@ -62,6 +62,9 @@ void Encoder::updateTwistMsg()
     // Stamp current time.
     encoder_msg_.header.stamp.sec = ros::Time::now().sec;
     encoder_msg_.header.stamp.nsec = ros::Time::now().nsec;
+
+   // ROS_INFO("Got %f left vel, %f right vel", left_speed_, right_speed_);
+   // ROS_INFO("Got %f linear, %f angular", linear_velocity_, angular_velocity_);
 }
 
 void Encoder::initializeParams()
